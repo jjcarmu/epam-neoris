@@ -63,4 +63,10 @@ public class ClientService implements IClientService {
 		return row;
 	}
 
+	@Override
+	public int delete(Integer client) {
+
+		return clientRepository.delete(client);
+	}
+
 }

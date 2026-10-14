@@ -5,12 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.chubb.test.model.dtos.ClientDto;
 import com.chubb.test.model.dtos.ServiceResponse;
@@ -71,5 +66,34 @@ public class ClientController {
     	return new ResponseEntity<>(serviceReponse, HttpStatus.OK);
     	
     }
-	
+
+
+	/**
+	 * Endpoint para eliminar un cliente.
+	 * <p>
+	 * Retorna un entero.
+	 * </p>
+	 *
+	 * @return 204 No Content` si se eliminó correctamente
+	 * @return 404 Not Found` si el cliente no existe.
+	 */
+	@CrossOrigin(origins = "http://localhost:4200")
+	@DeleteMapping("/clientes/{id}")
+	public ResponseEntity<ServiceResponse> deeleteClient(@RequestBody Integer client) {
+		ServiceResponse serviceReponse = new ServiceResponse();
+		int result = clientService.delete(client);
+
+		if (result == -1) {
+			serviceReponse.setSuccess(true);
+			serviceReponse.setMessage("Cliente no deleted");
+			return new ResponseEntity<>(serviceReponse, HttpStatus.NOT_FOUND);
+		}
+		else {
+			return new ResponseEntity<>(serviceReponse, HttpStatus.NO_CONTENT);
+		}
+
+	}
+
+
+
 }

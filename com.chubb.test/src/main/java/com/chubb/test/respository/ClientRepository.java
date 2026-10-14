@@ -25,4 +25,9 @@ public class ClientRepository implements IClientRepository {
 		return jdbcTemplate.update("insert into clients values (?, ?, ?, ?)", new Object[] {client.getFirstName(), client.getLastName(), client.getSurname(), client.getPhone()});
 	}
 
+	@Override
+	public int delete(Integer client) {
+		return jdbcTemplate.update("DELETE FROM clients WHERE id = ?", client);
+	}
+
 }
