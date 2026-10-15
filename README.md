@@ -22,3 +22,7 @@ La aplicación está configurada para ejecutarse bajo el puerto `8080` con el co
 ```bash
 ./mvnw spring-boot:run
 ```
+
+Una vez que la aplicación esté corriendo, puedes interactuar con los endpoints sin necesidad de Postman mediante la interfaz de Swagger UI.
+
+*   **Swagger UI:** [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
