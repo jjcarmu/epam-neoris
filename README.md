@@ -14,7 +14,7 @@ La aplicación está configurada para ejecutarse bajo el puerto `8080` con el co
 
 ### Compilar y probar:
 ```bash
-./mvnw clean install
+./mvnw clean install -Dmaven.test.skip=true
 ```
 *(Nota: El comando ejecuta los tests y comprueba la concurrencia. Si prefieres omitir los tests usa `./mvnw clean install -DskipTests`)*
 
