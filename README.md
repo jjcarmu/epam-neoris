@@ -2,11 +2,9 @@
 
 *   **Java 17**
 *   **Spring Boot 3.2.5**: Framework principal.
-*   **Spring Data MongoDB**: Integración con la base de datos NoSQL.
 *   **Lombok**: Reducción de código boilerplate (getters, setters, constructores).
 *   **SpringDoc OpenAPI (Swagger UI)**: Documentación interactiva de la API.
 *   **Docker & Docker Compose**: Contenerización de la base de datos MongoDB y Mongo Express.
-*   **JUnit 5 & Spring Boot Test**: Pruebas unitarias y de integración.
 
 
 

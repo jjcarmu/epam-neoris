@@ -6,7 +6,7 @@ Se ajusto errores en el pom, ya que habie errores de dependencia, se agrego endp
 
 ## Cómo se implementó
 Se crea el end-poin delete, siguiendo la estructura ya establecida 
-Nota:  no se alcanxa a realizar la parte del front-end, por falta de tiempo.
+Nota:  no se alcance realizar la parte del front-end, por falta de tiempo.
 ...
 
 ## Cambios en base de datos / configuración
